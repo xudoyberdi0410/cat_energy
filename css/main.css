@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oswald";
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+header {
+  background-image: url("../images/hero_bg_image.png"), linear-gradient(90deg, #fff 0% 50%, #64A83B 50% 100%);
+  background-repeat: no-repeat;
+  background-position: right top;
+  height: 694px;
+  padding-top: 53px;
+  margin: 0;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .logo {
+  cursor: pointer;
+}
+header nav .logo:hover {
+  opacity: 0.8;
+}
+header nav .logo:active {
+  opacity: 0.6;
+}
+header nav ul {
+  display: flex;
+  gap: 33px;
+}
+header nav ul li {
+  list-style: none;
+  padding-bottom: 8px;
+}
+header nav ul li a {
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #fff;
+}
+header nav ul li a:hover {
+  text-decoration: none;
+}
+header nav ul li:hover {
+  opacity: 0.6;
+}
+header nav ul li:active {
+  opacity: 0.3;
+}
+header nav ul li.active {
+  border-bottom: 2px solid #fff;
+}
+header .hero {
+  display: flex;
+  align-items: center;
+}
+header .hero .left {
+  max-width: 415px;
+}
+header .hero .left h1 {
+  font-size: 60px;
+  line-height: 60px;
+  margin-bottom: 40px;
+}
+header .hero .left h3 {
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+header .hero .left .btn {
+  font-size: 20px;
+  text-transform: uppercase;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #68B738;
+  padding: 14px 26px;
+}
+header .hero .left .btn a {
+  color: #FFFFFF;
+}
+header .hero .left .btn:hover {
+  background-color: #5EAA2F;
+}
+header .hero .left .btn:active a {
+  opacity: 0.3;
+}
+header .hero img {
+  margin-left: -15px;
+}
+
+.cards {
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+  padding: 82px 0 72px;
+}
+.cards .card {
+  width: 570px;
+  height: 374px;
+  background-color: #f2f2f2;
+  padding: 40px 52px;
+}
+.cards .card__title {
+  display: flex;
+  align-items: center;
+  gap: 62px;
+  margin-bottom: 40px;
+}
+.cards .card__title h2 {
+  font-size: 36px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+.cards .card p {
+  font-family: "Arial";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 22px;
+}
+.cards .card .link_catalog {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+.cards .card .link_catalog span {
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+.cards .card .link_catalog:active {
+  opacity: 0.3;
+}
+.cards .second-card .card__title {
+  gap: 47px;
+}
+
+.how h2 {
+  font-size: 60px;
+  line-height: 60px;
+  margin-bottom: 32px;
+}
+.how .how-wrapper {
+  display: flex;
+  gap: 83px;
+  justify-content: space-between;
+}
+.how .how-wrapper .how-item {
+  height: 280px;
+  position: relative;
+  padding-top: 40px;
+}
+.how .how-wrapper .how-item .icon {
+  padding: 24px 25px;
+  background-color: #68B738;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-bottom: 30px;
+}
+.how .how-wrapper .how-item .icon svg {
+  width: 30px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.how .how-wrapper .how-item p {
+  font-family: "Arial";
+  font-size: 16px;
+  line-height: 24px;
+  color: #444444;
+}
+.how .how-wrapper .how-item .bg-text {
+  font-size: 280px;
+  line-height: 280px;
+  color: #f2f2f2;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.before-after {
+  padding-top: 58px;
+  padding-bottom: 75px;
+  background: linear-gradient(#fff 0% 30%, #f2f2f2 30% 100%);
+}
+.before-after .container {
+  display: flex;
+}
+.before-after h2 {
+  font-size: 60px;
+  line-height: 60px;
+  margin-bottom: 146px;
+}
+.before-after .left {
+  max-width: 436px;
+}
+.before-after .left p {
+  font-family: "Arial";
+  font-size: 16px;
+  line-height: 24px;
+  color: #444444;
+  margin-bottom: 70px;
+}
+.before-after .left .modules {
+  display: flex;
+  gap: 42px;
+}
+.before-after .left .modules .module {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #CDCDCD;
+  border-radius: 3px;
+  flex: 0 0 162px;
+  padding-top: 15px;
+  margin-bottom: 50px;
+}
+.before-after .left .modules .module span {
+  font-size: 30px;
+  line-height: 37px;
+  margin: 0;
+  margin-bottom: 11px;
+}
+.before-after .left .modules .module p {
+  font-size: 14px;
+  line-height: 14px;
+  background: #f2f2f2;
+  margin-bottom: -8px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0 8px;
+}
+.before-after .left .modules p {
+  margin: 0;
+}
+.before-after .left span {
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  margin-right: 55px;
+}
+.before-after .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 auto;
+}
+.before-after .right .images {
+  display: flex;
+  gap: 0;
+}
+.before-after .right .images .range-img {
+  overflow: hidden;
+}
+.before-after .right .images .img-1 {
+  width: 345px;
+}
+.before-after .right .images .img-2 {
+  width: 345px;
+}
+.before-after .right input[type=range] {
+  -webkit-appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 428px;
+}
+.before-after .right input[type=range]::-webkit-slider-runnable-track {
+  height: 6px;
+  background: #DCDCDC;
+  border-radius: 6px;
+}
+.before-after .right input[type=range]::-moz-range-track {
+  height: 6px;
+  background: #DCDCDC;
+  border-radius: 6px;
+}
+.before-after .right input[type=range]::-webkit-slider-thumb {
+  position: relative;
+  -webkit-appearance: none;
+  margin-top: -14px;
+  appearance: none;
+  width: 34px;
+  height: 34px;
+  background: url("../images/small-green-circle.png"), #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.16));
+  border: 1px solid #CDCDCD;
+}
+.before-after .right input[type=range]::-moz-range-thumb {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.16));
+  border: 1px solid #CDCDCD;
+}/*# sourceMappingURL=main.css.map */
