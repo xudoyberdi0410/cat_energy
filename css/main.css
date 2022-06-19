@@ -272,37 +272,56 @@ header .hero img {
   justify-content: center;
   align-items: center;
   flex: 1 1 auto;
+  width: 690px;
+  height: 656px;
+  gap: 20px;
 }
 .before-after .right .images {
-  display: flex;
-  gap: 0;
+  overflow: hidden;
+  width: 345px;
+  height: 493px;
+  position: relative;
 }
-.before-after .right .images .range-img {
+.before-after .right .images .before {
+  z-index: 3;
+}
+.before-after .right .images .before, .before-after .right .images .after {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
   overflow: hidden;
 }
-.before-after .right .images .img-1 {
-  width: 345px;
+.before-after .right .images .before img, .before-after .right .images .after img {
+  height: 100%;
 }
-.before-after .right .images .img-2 {
-  width: 345px;
+.before-after .right .images .before {
+  width: 50%;
 }
-.before-after .right input[type=range] {
+.before-after .right .range {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.before-after .right .range input[type=range] {
   -webkit-appearance: none;
   background: transparent;
   cursor: pointer;
-  width: 428px;
+  width: 345px;
 }
-.before-after .right input[type=range]::-webkit-slider-runnable-track {
+.before-after .right .range input[type=range]::-webkit-slider-runnable-track {
   height: 6px;
   background: #DCDCDC;
   border-radius: 6px;
 }
-.before-after .right input[type=range]::-moz-range-track {
+.before-after .right .range input[type=range]::-moz-range-track {
   height: 6px;
   background: #DCDCDC;
   border-radius: 6px;
 }
-.before-after .right input[type=range]::-webkit-slider-thumb {
+.before-after .right .range input[type=range]::-webkit-slider-thumb {
   position: relative;
   -webkit-appearance: none;
   margin-top: -14px;
@@ -316,10 +335,17 @@ header .hero img {
   filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.16));
   border: 1px solid #CDCDCD;
 }
-.before-after .right input[type=range]::-moz-range-thumb {
+.before-after .right .range input[type=range]::-moz-range-thumb {
   width: 34px;
   height: 34px;
   border-radius: 50%;
   filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.16));
   border: 1px solid #CDCDCD;
+}
+.before-after .right .range span {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: uppercase;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.26);
 }/*# sourceMappingURL=main.css.map */

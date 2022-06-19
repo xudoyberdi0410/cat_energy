@@ -265,54 +265,80 @@ header{
         justify-content: center;
         align-items: center;
         flex: 1 1 auto;
+        width: 690px;
+        height: 656px;
+        gap: 20px;
         .images{
-            display: flex;
-            gap: 0;
-            .range-img{
+            overflow: hidden;
+            width: 345px;
+            height: 493px;
+            position: relative;
+            .before{
+                z-index: 3;
+            }
+            .before, .after{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                pointer-events: none;
                 overflow: hidden;
+                img{
+                    height: 100%;
+                }
             }
-            .img-1{
-                width: 690px/100*50;
-            }
-            .img-2{
-                width: 690px/100*50;
+            .before{
+                width: 50%;
             }
         }
-        input[type="range"]{
-            -webkit-appearance: none;
-            background: transparent;
-            cursor: pointer;
-            width: 428px;
-            &::-webkit-slider-runnable-track{
-                height: 6px;
-                background: #DCDCDC;
-                border-radius: 6px;
-            }
-            &::-moz-range-track{
-                height: 6px;
-                background: #DCDCDC;
-                border-radius: 6px;
-            }
-            &::-webkit-slider-thumb{
-                position: relative;
+        .range{
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            input[type="range"]{
                 -webkit-appearance: none;
-                margin-top: (6px/2)-(34px/2);
-                appearance: none;
-                width: 34px;
-                height: 34px;
-                background: url('../images/small-green-circle.png'), #fff;
-                background-position: center;
-                background-repeat: no-repeat;
-                border-radius: 50%;
-                filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.16));
-                border: 1px solid #CDCDCD;
+                background: transparent;
+                cursor: pointer;
+                width: 345px;
+                &::-webkit-slider-runnable-track{
+                    height: 6px;
+                    background: #DCDCDC;
+                    border-radius: 6px;
+                }
+                &::-moz-range-track{
+                    height: 6px;
+                    background: #DCDCDC;
+                    border-radius: 6px;
+                }
+                &::-webkit-slider-thumb{
+                    position: relative;
+                    -webkit-appearance: none;
+                    margin-top: (6px/2)-(34px/2);
+                    appearance: none;
+                    width: 34px;
+                    height: 34px;
+                    background: url('../images/small-green-circle.png'), #fff;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    border-radius: 50%;
+                    filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.16));
+                    border: 1px solid #CDCDCD;
+                }
+                &::-moz-range-thumb{
+                    width: 34px;
+                    height: 34px;
+                    border-radius: 50%;
+                    filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.16));
+                    border: 1px solid #CDCDCD;
+                }
             }
-            &::-moz-range-thumb{
-                width: 34px;
-                height: 34px;
-                border-radius: 50%;
-                filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.16));
-                border: 1px solid #CDCDCD;
+            span{
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 30px;
+                text-transform: uppercase;
+                border-bottom: 1px dotted rgba($color: #000000, $alpha: 0.26);
             }
         }
     }

@@ -10,6 +10,6 @@ document.querySelectorAll('.link_catalog')[1].onmouseover = () => {
 document.querySelectorAll('.link_catalog')[1].onmouseout = () => {
     document.querySelectorAll('.link_catalog svg')[1].innerHTML = `<line y1="6" x2="18" y2="6" stroke="black" stroke-width="2"/><path d="M24 6L17.25 11.1962L17.25 0.803848L24 6Z" fill="black"/>`
 }
-document.querySelector('input[type="range"]').oninput = () =>{
-    console.log(document.querySelector('input[type="range"]').value)
+document.querySelector('input[type="range"]').oninput = (e) =>{
+    document.querySelector('.before').style.width = `${e.target.value}%`
 }
