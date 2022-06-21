@@ -10,9 +10,9 @@
 a{
     text-decoration: none;
 }
-
 .container{
     max-width: 1220px;
+    padding: 0 40px;
     margin: 0 auto;
 }
 // header
@@ -39,10 +39,12 @@ header{
         }
         ul{
             display: flex;
-            gap: 33px;
             li{
                 list-style: none;
+                // width: fit-content;
+                text-align: center;
                 padding-bottom: 8px;
+                margin-right: 10px;
                 a{
                     font-size: 20px;
                     line-height: 30px;
@@ -64,6 +66,7 @@ header{
             }
         }
     }
+    // overflow: hidden;
     .hero{
         display: flex;
         align-items: center;
@@ -99,21 +102,25 @@ header{
                 }
             }
         }
-        img{
-            margin-left: -15px;
-        }
     }
+    
 }
 .cards{
     display: flex;
-    gap: 80px;
+    gap: 4%;
     justify-content: center;
     padding: 82px 0 72px;
     .card{
-        width: 570px;
+        width: 46.7%;
         height: 374px;
         background-color: #f2f2f2;
-        padding: 40px 52px;
+        padding: 2%;
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        .right{
+            display: none;
+        }
         &__title{
             display: flex;
             align-items: center;
@@ -341,5 +348,146 @@ header{
                 border-bottom: 1px dotted rgba($color: #000000, $alpha: 0.26);
             }
         }
+    }
+}
+footer{
+    background-color: #F2F2F2;
+    padding: 58px 0;
+    .container{
+        display: flex;
+        justify-content: space-between;
+        .logo{
+            &:hover{
+                opacity: .8;
+            }
+            &:active{
+                opacity: .6;
+            }
+        }
+        .social{
+            a:hover{
+                svg path{
+                    stroke: #68B738; 
+                }
+            }
+            a:active{
+                opacity: .3;
+            }
+            a:first-child{
+                margin-right: 6px;
+            }
+            display: flex;
+            align-items: center;
+            gap: 21px;
+        }
+        svg{
+            cursor: pointer;
+            &:hover{
+                .svg_icon{
+                    fill: #68B738;
+                }
+            }
+            &:active{
+                opacity: .3;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .container{
+        max-width: 708px;
+    }
+    header{
+        background: none;
+        padding-top: 23px;
+        nav{
+            ul{
+                li{
+                    a{
+                        color: #000000;
+                        font-size: 18px;
+                        line-height: 24px;
+                    }
+                    &.active{
+                        border-bottom: 2px solid #68B738;
+                    }
+                }
+            }
+        }
+        .hero{
+            margin-top: 50px;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: 110px;
+            img{
+                margin: -90px 0 0 0px;
+                z-index: -1;
+            }
+        }
+    }
+    .cards{
+        flex-direction: column;
+        padding-top: 145px;
+        align-items: center;
+        gap: 30px;
+        .card{
+            width: 100%;
+            .right{
+                display: block;
+            }
+            &__title{
+                img{
+                    display: none;
+                }
+            }
+        }
+        
+    }
+    .how{
+        .how-wrapper{
+            flex-wrap: wrap;
+            gap: 37px;
+            .how-item{
+                width: 230px;
+            }
+        }
+    }
+    .before-after{
+        background: linear-gradient(#fff 0% 70%, #f2f2f2 70% 100%);
+        .container{
+            flex-direction: column;
+            .left{
+                max-width: 100%;
+                h2{
+                    margin-bottom: 63px;
+                }
+                p{
+                    margin-bottom: 54px;
+                }
+                .bottom_left{
+                    display: flex;
+                    justify-content: space-between;
+                }
+                .text{
+                    display: flex;
+                    flex-direction: column;
+                    text-align: end;
+                    gap: 9px;
+                }
+                span{
+                    margin: 0;
+                }
+                .modules{
+                    .module{
+                        p{
+                            background: #fff;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer{
+        padding: 55px 0 61px;
     }
 }
